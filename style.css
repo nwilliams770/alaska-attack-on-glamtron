@@ -1,0 +1,33 @@
+canvas {
+  position: absolute;
+  background: transparent;
+  display: flex;
+  top: 254px;
+}
+#background {
+  z-index: 1;
+}
+#main {
+  z-index: 2;
+}
+#alaska {
+  z-index: 3;
+}
+
+#window-cover {
+  position: relative;
+  margin-top: -64px;
+  left: 2px;
+}
+
+.game-container {
+  background-color: #3d3d3d;
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  position: absolute;
+  z-index: 30;
+  color: red;
+}
