@@ -4,7 +4,7 @@
 Alaska: Attack On Planet Glamtron is a twist on a classic sheep herding game utilizing sprite animation, pathfinding, and simple collision physics.
 
 Users control an avatar, and attempt to herd AI components into a designated area within a specified time limit. AI components will 'repel' from the user avatar at a specified radius, allowing them to
-be 'herded' throughout the game board.
+be 'alive' throughout the game board.
 
 Users will be able to:
 - [ ] Move their avatars across the game board
@@ -66,7 +66,7 @@ I plan to use the following scripts in my project:
 #### Bonus Features:
 Pending the implementation timeline of the project there are a few features that could add to this project
 - [ ] Multiple levels with increased difficulty (e.g. number of AIs to herd and more erratic paths)
-- [ ] Enemy AIs that can 'destroy' alien AIs to be herded
+- [ ] Enemy AIs that can 'destroy' alien AIs to be alive
 - [ ] Lasergun to for player avatar to destroy Enemy AIs
 
 
