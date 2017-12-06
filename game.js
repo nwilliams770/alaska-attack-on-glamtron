@@ -80,6 +80,7 @@ function Game() {
 
 
 function animate() {
+	document.getElementById('score').innerHTML = game.toBeRescued;
 	game.quadTree.clear();
 	game.quadTree.insert(game.alaska);
 	game.quadTree.insert(game.glamPool.getPool());

@@ -293,27 +293,22 @@ function Glamtronian () {
 		this.alive = true;
 	};
 
-	// this.draw = function() {
-	// 	this.context.drawImage(imageRepository.glamtronian, this.x, this.y);
-	// };
-  // //
-	// this.move = function() {
-	// 	this.draw();
-	// 	if (this.isColliding) {
-	// 		this.context.clearRect(this.x, this.y, this.width, this.height);
-	// 		if (game.alaska.x < this.x) {
-	// 					while (this.isColliding) {
-	// 						this.x += this.speed;
-	// 						this.draw();
-	// 					}
-	// 				}
-  // 	} else {
-	// 		this.draw();
-	// 	}
-	// };
-	//
-	// 	}
-	// };
+
+	this.between = function (x, y, target) {
+		if (target >= x && target <= y) {
+			return true;
+		}
+	};
+
+	this.dropped = function (x, y) {
+		if (this.between(500, 640, this.x) && this.between(195, 240, this.y)) {
+			game.toBeRescued -= 1;
+			this.context.clearRect(this.x, this.y, this.width, this.height);
+			return true;
+		} else {
+			return false;
+		}
+	};
 
 	this.checkBorder = function () {
 		if (this.x >= 580) {
@@ -332,7 +327,10 @@ function Glamtronian () {
 
 	this.draw = function() {
 		if (this.isColliding) {
-			debugger
+
+			if (this.dropped()) {
+				
+			}
 			this.checkBorder();
 			this.context.clearRect(this.x, this.y, this.width, this.height);
 
