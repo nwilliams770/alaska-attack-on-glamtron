@@ -1,9 +1,61 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 canvas {
   position: absolute;
   background: transparent;
   display: flex;
-  top: 254px;
+  top: 247px;
 }
+
+
 #background {
   z-index: 1;
 }
@@ -26,7 +78,7 @@ canvas {
 }
 
 .bg {
-  background-color: #262626;
+  background-color: #111111;
   width: 100%;
   height: 100%;
 }
@@ -39,16 +91,35 @@ i {
 
 .github {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 72px;
   right: 121px;
   z-index: 5;
 }
 
 .linkedin {
-  display: flex;
-  position: absolute;
+  display: inline-flex;
+  position: fixed;
   top: 75px;
   left: 135px;
   z-index: 5;
+}
+
+#title-screen {
+  visibility: visible;
+  position: absolute;
+  width: 640px;
+  height: 480px;
+  z-index: 7;
+  margin-top: 247px;
+  transition: all 0.3s ease-in-out;
+}
+.score {
+	position: absolute;
+	margin-top: 250px;
+	left: 480px;
+	color: #FF7F00;
+	font-family: Helvetica, sans-serif;
+	cursor: default;
+	z-index: 4;
 }
