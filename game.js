@@ -1,7 +1,7 @@
 
 function clearTitle() {
 		document.getElementById("title-screen").style.visibility = "hidden";
-};
+}
 
 function Game() {
 
@@ -60,8 +60,6 @@ function Game() {
 					y += spacer
 				}
 			}
-
-
 			this.quadTree = new QuadTree({x:0,y:0,width:this.mainCanvas.width,height:this.mainCanvas.height});
 
 			return true;
@@ -70,10 +68,31 @@ function Game() {
 		}
 	};
 
-
 	this.start = function() {
 		this.alaska.draw();
 		animate();
+	};
+
+	this.gameOver = function() {
+		document.getElementById("game-over").style.display = "block";
+	};
+
+	this.restart = function() {
+		document.getElementById("game-over").style.display = "none";
+		this.bgContext.clearRect(0, 0, this.bgCanvas.width, this.bgCanvas.height);
+		this.alaskaContext.clearRect(0, 0, this.alaskaCanvas.width, this.alaskaCanvas.height);
+		this.mainContext.clearRect(0 ,0, this.mainCanvas.width, this.mainCanvas.height);
+
+		this.quadTree.clear();
+
+		this.background.init(0,0);
+		this.alaska.init(100, 300, imageRepository.alaskaup.width,
+			imageRepository.alaskaup.height);
+		this.glamPool.init("glamtronian");
+		this.toBeRescued = 5;
+
+		this.start();
+
 	};
 }
 
@@ -113,7 +132,8 @@ function detectCollision() {
 			}
 		}
 	}
-};
+}
+
 const game = new Game();
 
 function init() {

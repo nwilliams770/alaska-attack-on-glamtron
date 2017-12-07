@@ -40,7 +40,7 @@ function Pool(maxSize) {
 
 	this.get = function(x, y, speed) {
 		if(!pool[size - 1].alive) {
-			pool[size - 1].spawn(x, y, speed);
+			pool[size - 1].spawn(x, y);
 			pool.unshift(pool.pop());
 		}
 	};
@@ -49,7 +49,7 @@ function Pool(maxSize) {
 		for (var i = 0; i < size; i++) {
 			if (pool[i].alive) {
 				if (pool[i].draw()) {
-					pool.splice(i,1);
+					pool[i].clear();
 					pool.push((pool.splice(i,1))[0]);
 				}
 			}
@@ -324,13 +324,21 @@ function Glamtronian () {
 		}
 	};
 
+	this.checkRocketBorder = function () {
+		if (this.x >= 450 && this.y <= 200) {
+			this.x = 450;
+			this.y = this.y;
+		}
+	};
+
 
 	this.draw = function() {
 		if (this.isColliding) {
-
+			// debugger
 			if (this.dropped()) {
-				
+				return true;
 			}
+			this.checkRocketBorder();
 			this.checkBorder();
 			this.context.clearRect(this.x, this.y, this.width, this.height);
 
