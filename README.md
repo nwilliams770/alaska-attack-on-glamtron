@@ -1,5 +1,6 @@
 # Alaska: Attack On Planet Glamtron
 ### Background and Overview
+[Live](https://nwilliams770.github.io/alaska-attack-on-glamtron/)
 
 Alaska: Attack On Planet Glamtron is a twist on a classic sheep herding game utilizing sprite animation, pathfinding, and simple collision physics.
 
