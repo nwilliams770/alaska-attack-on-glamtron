@@ -16,9 +16,11 @@
 						<img src="assets/linkedin-logo.png">
 					</a>
 				</div> -->
-				<img id="title-screen" src="assets/titlescreen.gif" onclick="clearTitle()">
+				<img id="title-screen" src="assets/titlescreen.gif" onkeydown="clearTitle(e)">
+				<img id="intro-screen" src="assets/intro-screen.png" onkeydown="clearTitle(e)">
+				
 				<div class="score">TO BE RESCUED: <span id="score"></span></div>
-				<img id="window-cover" src="assets/window-cover-4.png">
+				<img id="window-cover" src="assets/window-cover-5.png">
 				<canvas id="background" width="640" height="480">
 				</canvas>
 
@@ -27,6 +29,11 @@
 
 				<canvas id="alaska" width="640" height="480">
 				</canvas>
+				<div class="game-over" id="game-over">GAME OVER
+					<p>
+						<span onclick="game.restart()">Restart</span>
+					</p>
+				</div>
 			</div>
 		</div>
 		<script src="game.js"></script>

@@ -69,8 +69,8 @@ canvas {
 
 #window-cover {
   position: relative;
-  margin-top: -64px;
-  left: 2px;
+    margin-top: 9px;
+    margin-left: 2px;
 }
 
 .game-container {
@@ -116,12 +116,44 @@ i {
   margin-top: 247px;
   transition: all 0.3s ease-in-out;
 }
+
+#intro-screen {
+  visibility: visible;
+  position: absolute;
+  width: 640px;
+  height: 480px;
+  z-index: 6;
+  margin-top: 247px;
+  transition: all 0.3s ease-in-out;
+}
+
 .score {
 	position: absolute;
-	margin-top: 250px;
-	left: 480px;
+	margin-top: 255px;
+	margin-left: -150px;
 	color: red;
 	font-family:'Press Start 2P',cursive;
 	cursor: default;
 	z-index: 4;
+}
+
+.game-over {
+    margin-top: 410px;
+
+    color: #f473d8;
+    font-family:'Press Start 2P',cursive;
+    font-size: 30px;
+    cursor: default;
+    visibility: hidden;
+    z-index: 5;
+    position: absolute;
+}
+.game-over span {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 50px;
+}
+.game-over span:hover {
+  color: #eb33c3;
 }

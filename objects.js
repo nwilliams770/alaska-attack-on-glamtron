@@ -301,13 +301,14 @@ function Glamtronian () {
 	};
 
 	this.dropped = function (x, y) {
-		if (this.between(500, 640, this.x) && this.between(195, 240, this.y)) {
+		if (this.between(500, 640, this.x) && this.between(195, 200, this.y)) {
 			game.toBeRescued -= 1;
 			this.context.clearRect(this.x, this.y, this.width, this.height);
+			this.checkDropNumber();
 			return true;
 		} else {
 			return false;
-		}
+		}	
 	};
 
 	this.checkBorder = function () {
@@ -331,10 +332,15 @@ function Glamtronian () {
 		}
 	};
 
+	this.checkDropNumber = function () {
+		if (game.toBeRescued < 5) {
+			game.gameOver();
+		}
+	};
+
 
 	this.draw = function() {
 		if (this.isColliding) {
-			// debugger
 			if (this.dropped()) {
 				return true;
 			}
