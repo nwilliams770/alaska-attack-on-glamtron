@@ -1,6 +1,8 @@
 
 document.addEventListener('keydown', e => {
+	if (e.keyCode === 13) {
 		document.getElementById("title-screen").style.visibility = "hidden";
+	}
 });
 
 document.addEventListener('click', e => {
@@ -168,7 +170,6 @@ const imageRepository = new function() {
 	this.alaskaup = new Image();
 	this.alaskadown = new Image();
 	this.glamtronian = new Image();
-
 
 	let numImages = 6;
 	let numLoaded = 0;

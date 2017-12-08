@@ -280,11 +280,11 @@ function Alaska() {
 Alaska.prototype = new Drawable();
 
 
-
 function Glamtronian () {
 	this.alive = false;
 	this.collidableWith = "alaska";
 	this.type = "glamtronian";
+	
 
 	this.spawn = function(x, y) {
 		this.x = x;
@@ -300,11 +300,13 @@ function Glamtronian () {
 		}
 	};
 
+
 	this.dropped = function (x, y) {
 		if (this.between(500, 640, this.x) && this.between(195, 200, this.y)) {
 			game.toBeRescued -= 1;
 			this.context.clearRect(this.x, this.y, this.width, this.height);
 			this.checkDropNumber();
+			// Sprite ();
 			return true;
 		} else {
 			return false;
