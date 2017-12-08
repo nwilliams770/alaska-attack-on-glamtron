@@ -71,6 +71,7 @@ canvas {
   position: relative;
     margin-top: 9px;
     margin-left: 2px;
+    z-index: 3;
 }
 
 .game-container {
@@ -102,6 +103,7 @@ display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 50px;
+    z-index: 30;
 }
 
 
