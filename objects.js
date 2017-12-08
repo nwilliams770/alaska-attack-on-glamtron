@@ -333,7 +333,7 @@ function Glamtronian () {
 	};
 
 	this.checkDropNumber = function () {
-		if (game.toBeRescued < 5) {
+		if (game.toBeRescued === 0) {
 			game.gameOver();
 		}
 	};

@@ -79,7 +79,7 @@ canvas {
 }
 
 .bg {
-  background-color: #111111;
+  background-color: #1F1F1F;
   width: 100%;
   height: 100%;
 	overflow: scroll;
@@ -91,21 +91,19 @@ i {
   color: red;
 }
 
-.github {
-  display: flex;
-  position: fixed;
-  top: 72px;
-  right: 121px;
-  z-index: 5;
+
+
+.links {
+display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 655px;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
 }
 
-.linkedin {
-  display: inline-flex;
-  position: fixed;
-  top: 75px;
-  left: 135px;
-  z-index: 5;
-}
 
 #title-screen {
   visibility: visible;

@@ -50,18 +50,18 @@ function Game() {
 
 			this.glamPool = new Pool (this.toBeRescued);
 			this.glamPool.init("glamtronian");
-			var height = imageRepository.glamtronian.height;
-			var width = imageRepository.glamtronian.width;
-			var x = 100;
-			var y = 30;
-			var spacer = y * 1.5;
-			for (var i = 1; i <= 5; i++) {
-				this.glamPool.get(x,y);
-				x += width + 25;
-				y += height + 5;
+			let height = imageRepository.glamtronian.height;
+			let width = imageRepository.glamtronian.width;
+			let x = 100;
+			let y = 130;
+			let spacer = x * 0.5;
+			for (let i = 1; i <= 5; i++) {
+				this.glamPool.get(x, y);
+				x += width + 20;
+				y += height + 2;
 				if (i % 6 == 0) {
 					x = 100;
-					y += spacer
+					y += spacer;
 				}
 			}
 			this.quadTree = new QuadTree({x:0,y:0,width:this.mainCanvas.width,height:this.mainCanvas.height});
@@ -89,21 +89,22 @@ function Game() {
 
 		this.quadTree.clear();
 
-		this.background.init(0,0);
-		this.alaska.init(100, 300, imageRepository.alaskaup.width, imageRepository.alaskaup.height);
-
 		this.toBeRescued = 5;
+		this.alaska.init(100, 300, imageRepository.alaskaup.width, imageRepository.alaskaup.height);
+		
+		
+		this.background.init(0, 0);
 		this.glamPool = new Pool(5);
 		this.glamPool.init("glamtronian");
-		var height = imageRepository.glamtronian.height;
-		var width = imageRepository.glamtronian.width;
-		var x = 100;
-		var y = 30;
-		var spacer = y * 1.5;
-		for (var i = 1; i <= 5; i++) {
+		let height = imageRepository.glamtronian.height;
+		let width = imageRepository.glamtronian.width;
+		let x = 100;
+		let y = 50;
+		let spacer = x * 0.5;
+		for (let i = 1; i <= 5; i++) {
 			this.glamPool.get(x, y);
-			x += width + 25;
-			y += height + 5;
+			x += width + 20;
+			y += height + 2;
 			if (i % 6 == 0) {
 				x = 100;
 				y += spacer;
