@@ -1,6 +1,6 @@
 # Alaska: Attack On Planet Glamtron
 
-[Live](https://nwilliams770.github.io/alaska-attack-on-glamtron/)
+[Play now!](https://nwilliams770.github.io/alaska-attack-on-glamtron/)
 
 ### Background and Overview
 
@@ -10,14 +10,14 @@ Users control an avatar, and attempt to herd AI components into a designated are
 be 'alive' throughout the game board.
 
 Users will be able to:
-- [ ] Move their avatars across the game board
-- [ ] Interact with AI to move them across the game board
-- [ ] Hear audio confirmations (e.g. sound effects) of actions such as properly herding an AI, losing the level, or completing the level
-- [ ] Pause or Restart the game
+- Move their avatars across the game board
+- Interact with AI to move them across the game board
+- Hear audio confirmations (e.g. sound effects) of actions such as properly herding an AI, losing the level, or completing the level
+- Pause or Restart the game
 
 In addition to the game screen itself, I plan to implement:
-- [ ] A moving title screen
-- [ ] A brief intro screen to game controls
+- A moving title screen
+- A brief intro screen to game controls
 
 With the except of Github and Linkedin link icons above the game screen, all other components will live inside the game screen (classic aracde 640 x 480 aspect ratio)
 ![alt text](http://res.cloudinary.com/nwilliams770/image/upload/v1512330533/title_screen_cbcn16.gif)
@@ -45,35 +45,32 @@ I plan to use the following scripts in my project:
 ### Implementation Timeline
 
 #### Weekend:
-- [ ] Get `webpack` serving files
-- [ ] Creation of game board
-- [ ] User controls for avatar and sprite animation
-- [ ] Basic collision logic to prevent user from going off-screen
+- Get `webpack` serving files
+- Creation of game board
+- User controls for avatar and sprite animation
+- Basic collision logic to prevent user from going off-screen
 
 #### Day 1:
-- [ ] Create AI game pieces and their path patterns
-- [ ] Start on collision interactions
+- Create AI game pieces and their path patterns
+- Start on collision interactions
 
 #### Day 2:
-- [ ] Finish collision interactions
-- [ ] Set up main game logic e.g. timer and win/lose messages (styled as well)
+- Finish collision interactions
+- Set up main game logic e.g. timer and win/lose messages (styled as well)
 
 #### Day 3: 
 - [ ] Add pause/restart features
 - [ ] Style game page outside of game screen (e.g. add LinkedIn/Github icon links as well as style background
 
 #### Day 4:
-- [ ] Learn `Web Audio API`
-- [ ] Add sound assets
+- Learn `Web Audio API`
+- Add sound assets
 
 #### Bonus Features:
 Pending the implementation timeline of the project there are a few features that could add to this project
-- [ ] Multiple levels with increased difficulty (e.g. number of AIs to herd and more erratic paths)
-- [ ] Enemy AIs that can 'destroy' alien AIs to be alive
-- [ ] Lasergun to for player avatar to destroy Enemy AIs
+- Multiple levels with increased difficulty (e.g. number of AIs to herd and more erratic paths)
+- Enemy AIs that can 'destroy' alien AIs to be alive
+- Lasergun to for player avatar to destroy Enemy AIs
 
-
-
-
-
+[Play now!](https://nwilliams770.github.io/alaska-attack-on-glamtron/)
 
