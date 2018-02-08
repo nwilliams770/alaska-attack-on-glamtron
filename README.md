@@ -59,8 +59,8 @@ I plan to use the following scripts in my project:
 - Set up main game logic e.g. timer and win/lose messages (styled as well)
 
 #### Day 3: 
-- [ ] Add pause/restart features
-- [ ] Style game page outside of game screen (e.g. add LinkedIn/Github icon links as well as style background
+- Add pause/restart features
+- Style game page outside of game screen (e.g. add LinkedIn/Github icon links as well as style background
 
 #### Day 4:
 - Learn `Web Audio API`
